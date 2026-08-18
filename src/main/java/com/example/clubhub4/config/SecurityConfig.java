@@ -45,7 +45,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         // Public pages and assets
                         .requestMatchers("/", "/dashboard", "/login", "/signup", "/register", "/error", "/403",
-                                "/css/**", "/js/**", "/images/**", "/favicon.ico", "/actuator/health").permitAll()
+                                "/css/**", "/js/**", "/images/**", "/favicon.ico", "/health").permitAll()
                         .requestMatchers(HttpMethod.GET, "/explore/**", "/clubs/**", "/logout","/uploads/**").permitAll()
                         // Public API (return 0 when unauthenticated to avoid popup)
                         .requestMatchers(HttpMethod.GET, "/api/me/notifications/**").permitAll()
